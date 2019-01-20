@@ -1,14 +1,14 @@
 import React, {Component} from "react";
+import Header from "../Header";
 import "./style.scss";
 
-class App extends Component {
+export default class extends Component {
   render() {
     return (
       <div className="app">
+        <Header />
         My App
       </div>
     );
   }
 }
-
-export default App;

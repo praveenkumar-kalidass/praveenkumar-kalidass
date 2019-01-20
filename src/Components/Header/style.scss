@@ -1,0 +1,14 @@
+@import "../../Utils/colors.scss";
+
+.ui-header {
+  .ui.header {
+    color: $theme-yellow;
+    padding: 25px 25px 0px 25px;
+  }
+  .ui.text.menu {
+    margin-left: 25px;
+    .item {
+      color: $white;
+    }
+  }
+}
