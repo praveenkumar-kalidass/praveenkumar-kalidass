@@ -61,9 +61,13 @@ const config = {
       }]
     }, {
       test: /\.(eot|svg|otf|ttf|woff|woff2)$/,
-      use: [
-        "file-loader"
-      ]
+      use: [{
+        loader: "file-loader",
+        options: {
+          name: "[name].[ext]",
+          outputPath: "fonts/"
+        }
+      }]
     }]
   }
 };
