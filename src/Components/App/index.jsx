@@ -1,5 +1,7 @@
 import React, {Component} from "react";
+import {HashRouter, Route} from "react-router-dom";
 import Header from "../Header";
+import Home from "../Home";
 import "./style.scss";
 
 export default class extends Component {
@@ -7,7 +9,9 @@ export default class extends Component {
     return (
       <div className="app">
         <Header />
-        My App
+        <HashRouter>
+          <Route path="/" component={Home}></Route>
+        </HashRouter>
       </div>
     );
   }

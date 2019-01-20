@@ -1,0 +1,40 @@
+@import "../../Utils/colors.scss";
+
+.ui-home {
+  .ui.grid.home-grid {
+    min-height: 100vh;
+    .home-image-container {
+      max-height: 100vh;
+      overflow: hidden;
+    }
+    .header {
+      &.title-label {
+        color: $white;
+        font-size: 6vh;
+      }
+      &.title-name {
+        color: $theme-yellow;
+        font-size: 9vh;
+      }
+      &.title-designation {
+        color: $white;
+        font-size: 3vh;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .ui-home {
+    .ui.grid.home-grid {
+      .home-image-container {
+        max-height: 50vh;
+      }
+      .header {
+        &.title-name {
+          font-size: 8vh;
+        }
+      }
+    }
+  }
+}

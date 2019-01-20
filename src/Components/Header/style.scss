@@ -1,6 +1,8 @@
 @import "../../Utils/colors.scss";
 
 .ui-header {
+  position: fixed;
+  top: 0;
   .ui.header {
     color: $theme-yellow;
     padding: 25px 25px 0px 25px;
@@ -10,5 +12,13 @@
     .item {
       color: $white;
     }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .ui-header {
+    background-color: $theme-blue;
+    position: sticky;
+    z-index: 100;
   }
 }
