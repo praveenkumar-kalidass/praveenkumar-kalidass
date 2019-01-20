@@ -3,14 +3,26 @@
 .ui-header {
   position: fixed;
   top: 0;
+  z-index: 100;
   .ui.header {
-    color: $theme-yellow;
-    padding: 25px 25px 0px 25px;
+    padding: 25px 25px 0px 30px;
+    .header {
+      color: $theme-yellow;
+    }
   }
   .ui.text.menu {
     margin-left: 25px;
     .item {
-      color: $white;
+      .link {
+        color: $white;
+        &:hover {
+          font-weight: 700;
+        }
+        &.active {
+          color: $theme-yellow;
+          font-weight: 700;
+        }
+      }
     }
   }
 }
@@ -19,6 +31,5 @@
   .ui-header {
     background-color: $theme-blue;
     position: sticky;
-    z-index: 100;
   }
 }

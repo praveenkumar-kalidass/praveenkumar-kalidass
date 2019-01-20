@@ -76,6 +76,15 @@ const config = {
           outputPath: "fonts/"
         }
       }]
+    }, {
+      test: /\.(pdf)$/,
+      use: [{
+        loader: "file-loader",
+        options: {
+          name: "[name].[ext]",
+          outputPath: "documents/"
+        }
+      }]
     }]
   }
 };

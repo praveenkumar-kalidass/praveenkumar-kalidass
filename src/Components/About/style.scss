@@ -1,0 +1,36 @@
+@import "../../Utils/colors.scss";
+
+.ui-about {
+  .ui.grid.about-grid {
+    min-height: 100vh;
+    .about-image-container {
+      max-height: 100vh;
+      overflow: hidden;
+    }
+    .header {
+      color: $white;
+    }
+    .download-button {
+      background-color: $theme-yellow;
+      color: $black;
+      margin-bottom: 10px;
+      .download-link {
+        display: block;
+        width: 100%;
+      }
+      .download-icon {
+        color: $black;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .ui-about {
+    .ui.grid.about-grid {
+      .about-image-container {
+        max-height: 50vh;
+      }
+    }
+  }
+}
