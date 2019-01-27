@@ -1,5 +1,23 @@
 @import "../../Utils/colors.scss";
 
 .ui-work {
-  
+  .ui.grid.work-grid {
+    min-height: 100vh;
+    .ui.image.company-image {
+      margin: 0 15%;
+      max-width: 70%;
+    }
+    .center-grid {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .ui-about {
+    .ui.grid.work-grid {
+      min-height: calc(100vh - 125px);
+    }
+  }
 }
