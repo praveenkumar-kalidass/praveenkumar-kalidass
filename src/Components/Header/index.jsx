@@ -18,10 +18,10 @@ export default class extends Component {
             <NavLink className="link" to="/about">About</NavLink>
           </Menu.Item>
           <Menu.Item>
-            <NavLink className="link" exact to="/">Work</NavLink>
+            <NavLink className="link" to="/work">Work</NavLink>
           </Menu.Item>
           <Menu.Item>
-            <NavLink className="link" exact to="/">Skills</NavLink>
+            <NavLink className="link" exact to="/skills">Skills</NavLink>
           </Menu.Item>
           <Menu.Item>
             <NavLink className="link" exact to="/">Accomplishments</NavLink>

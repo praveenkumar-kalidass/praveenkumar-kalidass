@@ -1,0 +1,22 @@
+@import "../../../../Utils/colors.scss";
+
+.ui-skill-step {
+  .ui.steps {
+    .step {
+      background-color: $theme-yellow;
+      &.active {
+        background-color: $theme-yellow-dark;
+        .title {
+          color: $black;
+        }
+        &:after {
+          left: -15px;
+          background-color: $theme-yellow-dark !important;
+        }
+      }
+      &:hover {
+        background-color: $theme-yellow-dark !important;
+      }
+    }
+  }
+}

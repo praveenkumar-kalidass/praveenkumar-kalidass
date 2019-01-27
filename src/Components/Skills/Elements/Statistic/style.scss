@@ -1,0 +1,26 @@
+@import "../../../../Utils/colors.scss";
+
+.ui-statistic {
+  .ui.statistics {
+    display: flex;
+    justify-content: center;
+    .ui.statistic {
+      margin: 15px;
+      min-width: 175px;
+      .value {
+        color: $white;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 787px) {
+  .ui-statistic {
+    .ui.statistics {
+      .ui.statistic {
+        min-width: 160px;
+      }
+    }
+  }
+}

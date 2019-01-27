@@ -1,0 +1,35 @@
+@import "../../Utils/colors.scss";
+
+.ui-skills {
+  .ui.grid.skills-grid {
+    min-height: 100vh;
+    .ui.dropdown {
+      border: 2px solid $theme-yellow;
+      padding: 10px;
+      margin-bottom: 20px;
+      &.skill-dropdown {
+        float: right;
+      }
+      .text {
+        color: $theme-yellow;
+        font-weight: 600;
+      }
+      .icon {
+        color: $theme-yellow;
+      }
+      .menu {
+        .text {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 320px) {
+  .ui-skills {
+    .ui.grid.skills-grid {
+      min-height: calc(100vh - 125px);
+    }
+  }
+}
