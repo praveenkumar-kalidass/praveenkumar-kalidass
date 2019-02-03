@@ -24,7 +24,7 @@ export default class extends Component {
             <NavLink className="link" exact to="/skills">Skills</NavLink>
           </Menu.Item>
           <Menu.Item>
-            <NavLink className="link" exact to="/">Contact</NavLink>
+            <NavLink className="link" exact to="/contact">Contact</NavLink>
           </Menu.Item>
         </Menu>
       </div>

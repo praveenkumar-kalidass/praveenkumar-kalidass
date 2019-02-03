@@ -1,0 +1,43 @@
+@import "../../Utils/colors.scss";
+
+.ui-contact {
+  .ui.grid.contact-grid {
+    min-height: 100vh;
+    .contact-input {
+      width: 100%;
+      input {
+        background-color: transparent;
+        border: 2px solid $theme-yellow;
+        color: $white;
+      }
+      .icon {
+        color: $theme-yellow;
+        line-height: 12px;
+        opacity: 1;
+      }
+    }
+    .contact-text {
+      background-color: transparent;
+      border: 2px solid $theme-yellow;
+      color: $white;
+    }
+    .send-button {
+      background-color: $theme-yellow;
+      color: $black;
+      float: right;
+    }
+    .sent-label {
+      background-color: transparent;
+      border: 2px solid $theme-yellow;
+      color: $theme-yellow;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 320px) {
+  .ui-contact {
+    .ui.grid.contact-grid {
+      min-height: calc(100vh - 125px);
+    }
+  }
+}
