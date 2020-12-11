@@ -15,6 +15,9 @@
 <a href="https://stackoverflow.com/users/7526877/praveenkumar-kalidass">
   <img align="left" alt="Praveenkumar's StackOverflow" width="22px" src="https://www.vectorlogo.zone/logos/stackoverflow/stackoverflow-tile.svg" />
 </a>
+<a href="https://www.npmjs.com/~praveenkumar-outlook">
+  <img align="left" alt="Praveenkumar's NPM" width="22px" src="https://www.vectorlogo.zone/logos/npmjs/npmjs-tile.svg" />
+</a>
 
 
 ![](https://komarev.com/ghpvc/?username=praveenkumar-kalidass&color=green)
