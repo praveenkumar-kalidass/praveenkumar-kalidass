@@ -9,11 +9,11 @@ const About = () => {
       <AboutTitle>{TEXT.ABOUT_ME}</AboutTitle>
       <Description>{TEXT.DESCRIPTION}</Description>
       <SocialLinks>
-        <LinkIcon className="icon-twitter" />
-        <LinkIcon className="icon-linkedin" />
-        <LinkIcon className="icon-github" />
-        <LinkIcon className="icon-facebook" />
-        <LinkIcon className="icon-stackexchange" />
+        <LinkIcon target="_blank" className="icon-twitter" href="https://twitter.com/mrpravin94" />
+        <LinkIcon target="_blank" className="icon-linkedin" href="https://www.linkedin.com/in/praveenkumar-kalidass/" />
+        <LinkIcon target="_blank" className="icon-github" href="https://github.com/praveenkumar-kalidass" />
+        <LinkIcon target="_blank" className="icon-facebook" href="https://facebook.com/Praveen261994" />
+        <LinkIcon target="_blank" className="icon-stackexchange" href="https://stackoverflow.com/users/7526877/praveenkumar-kalidass" />
       </SocialLinks>
     </AboutContainer>
   );
