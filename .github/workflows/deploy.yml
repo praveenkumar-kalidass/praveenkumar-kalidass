@@ -1,0 +1,32 @@
+name: deploy-cd
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    name: deploy
+    runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: ./praveenkumar-kalidass
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: build
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+      - run: yarn install
+      - run: yarn build
+      - name: version
+        uses: HardNorth/github-version-generate@v1.0.2
+      - name: commit
+        uses: EndBug/add-and-commit@v6
+        with:
+          add: 'build'
+          author_name: 'Praveenkumar Kalidass'
+          author_email: 'praveen.ece@outlook.com'
+          branch: 'gh-pages'
+          message: 'Deploy ${{ env.RELEASE_VERSION }}'
+          tag: ${{ env.RELEASE_VERSION }}
