@@ -18,6 +18,9 @@ export const LeftContainer = styled.div`
 
 export const RightContainer = styled.div`
   flex: 1;
+  @media(max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -45,16 +48,25 @@ export const Greetings = styled.text`
   color: ${COLOR.WHITE};
   font-size: 30px;
   margin-left: 5px;
+  @media(max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 export const FirstName = styled.text`
   color: ${COLOR.SECONDARY};
   font-size: 96px;
+  @media(max-width: 768px) {
+    font-size: 56px;
+  }
 `;
 
 export const LastName = styled.text`
   color: ${COLOR.SECONDARY};
   font-size: 96px;
+  @media(max-width: 768px) {
+    font-size: 56px;
+  }
 `;
 
 export const Designation = styled.text`

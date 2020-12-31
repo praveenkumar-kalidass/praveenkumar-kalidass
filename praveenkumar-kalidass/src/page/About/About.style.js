@@ -25,6 +25,9 @@ export const Description = styled.text`
   line-height: 24px;
   margin: 2vh 25vw;
   text-align: center;
+  @media(max-width: 768px) {
+    margin: 2vh 10vw;
+  }
 `;
 
 export const SocialLinks = styled.div`
@@ -32,6 +35,9 @@ export const SocialLinks = styled.div`
   flex-direction: row;
   justify-content: space-between;
   margin: 4vh 30vw;
+  @media(max-width: 768px) {
+    margin: 2vh 10vw;
+  }
 `;
 
 export const LinkIcon = styled.a`

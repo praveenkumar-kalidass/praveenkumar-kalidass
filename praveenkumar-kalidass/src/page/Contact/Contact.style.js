@@ -10,6 +10,9 @@ export const ContactContainer = styled.div`
 
 export const LeftContainer = styled.div`
   flex: 1;
+  @media(max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const RightContainer = styled.div`
