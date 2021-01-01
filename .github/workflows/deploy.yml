@@ -3,6 +3,9 @@ on:
   push:
     branches:
       - master
+env:
+  VERSION_FILE: ./praveenkumar-kalidass/package.json
+  VERSION_EXTRACT_PATTERN: '"version": "([^"]+)",'
 jobs:
   deploy:
     name: deploy
@@ -21,6 +24,10 @@ jobs:
       - run: yarn build
       - name: version
         uses: HardNorth/github-version-generate@v1.0.2
+        with:
+          version-source: file
+          version-file: ${{ env.VERSION_FILE }}
+          version-file-extraction-pattern: ${{ env.VERSION_EXTRACT_PATTERN }}
       - name: commit
         uses: EndBug/add-and-commit@v6
         with:
