@@ -28,10 +28,12 @@ jobs:
           version-source: file
           version-file: ${{ env.VERSION_FILE }}
           version-file-extraction-pattern: ${{ env.VERSION_EXTRACT_PATTERN }}
+      - name: status
+        run: git status
       - name: commit
         uses: EndBug/add-and-commit@v6
         with:
-          add: 'build'
+          add: 'build/'
           author_name: 'Praveenkumar Kalidass'
           author_email: 'praveen.ece@outlook.com'
           branch: 'gh-pages'
