@@ -14,28 +14,31 @@ jobs:
       run:
         working-directory: ./praveenkumar-kalidass
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v2
-      - name: build
+      - name: Build
         uses: actions/setup-node@v1
         with:
           node-version: '14.x'
       - run: yarn install
       - run: yarn build
-      - name: version
+      - name: Version
         uses: HardNorth/github-version-generate@v1.0.2
         with:
           version-source: file
           version-file: ${{ env.VERSION_FILE }}
           version-file-extraction-pattern: ${{ env.VERSION_EXTRACT_PATTERN }}
-      - name: status
+      - name: Status
         run: git status
-      - name: commit
-        uses: EndBug/add-and-commit@v6
-        with:
-          add: 'build/'
-          author_name: 'Praveenkumar Kalidass'
-          author_email: 'praveen.ece@outlook.com'
-          branch: 'gh-pages'
-          message: 'Deploy ${{ env.RELEASE_VERSION }}'
-          tag: ${{ env.RELEASE_VERSION }}
+      - name: Stash
+        run: |
+          git stash save -u
+          git fetch origin
+          git checkout gh-pages
+          git stash pop
+      - name: Add & Commit
+        run: |
+          git add build
+          git commit -m "Release: ${{ env.RELEASE_VERSION }}"
+          git push origin gh-pages
+
