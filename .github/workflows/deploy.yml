@@ -10,9 +10,6 @@ jobs:
   deploy:
     name: deploy
     runs-on: macos-latest
-    defaults:
-      run:
-        working-directory: ./praveenkumar-kalidass
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -20,6 +17,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '14.x'
+        working-directory: ./praveenkumar-kalidass
       - run: yarn install
       - run: yarn build
       - name: Version
@@ -30,15 +28,15 @@ jobs:
           version-file-extraction-pattern: ${{ env.VERSION_EXTRACT_PATTERN }}
       - name: Status
         run: git status
-      - name: Stash
+      - name: Move to directory
         run: |
-          git stash save -u
           git fetch origin
           git checkout gh-pages
-          git stash pop
+          mv praveenkumar-kalidass/build/* ./
+          rm -rf praveenkumar-kalidass/
       - name: Add & Commit
         run: |
-          git add build
+          git add .
           git commit -m "Release: ${{ env.RELEASE_VERSION }}"
           git push origin gh-pages
 
