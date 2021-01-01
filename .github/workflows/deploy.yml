@@ -10,6 +10,9 @@ jobs:
   deploy:
     name: deploy
     runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: ./praveenkumar-kalidass
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -17,7 +20,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-        working-directory: ./praveenkumar-kalidass
       - run: yarn install
       - run: yarn build
       - name: Version
@@ -32,11 +34,11 @@ jobs:
         run: |
           git fetch origin
           git checkout gh-pages
-          mv praveenkumar-kalidass/build/* ./
-          rm -rf praveenkumar-kalidass/
+          mv build/* ../
       - name: Add & Commit
         run: |
-          git add .
-          git commit -m "Release: ${{ env.RELEASE_VERSION }}"
+          cd ..
+          git add -- . ':!praveenkumar-kalidass'
+          git commit -m "Release: v${{ env.RELEASE_VERSION }}"
           git push origin gh-pages
 
