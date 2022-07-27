@@ -1,5 +1,5 @@
 <h1 align="center"><a href="https://github.com/praveenkumar-kalidass">Praveenkumar Kalidass</a> ☺️</h1>
-<h4 align="center">Application developer @ <a href="https://www.thoughtworks.com/">Thoughtworks</a></h4>
+<h4 align="center">Senior Software Engineer @ <a href="https://www.equalexperts.com">Equal Experts</a></h4>
 
 <br/>
 
